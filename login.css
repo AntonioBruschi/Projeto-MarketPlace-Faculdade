@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("images/computadorzin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 10px;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-login input,
+.form-login button {
+    width: 100%;
+    height: 50px;
+    padding: 0 16px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-login input {
+    border: 2px solid #ebebeb;
+}
+
+.form-login button {
+    border: none;
+    background: #a80404;
+    color: #fff;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.form-login button:hover {
+    background: #940303;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+}

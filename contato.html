@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAHCIP</title>
+    <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    
+    <nav>
+        <div class="container main-nav flex">
+            <a href="#" class="company-logo">
+                <img class="tomate" src="./images/logotipoUAHCIP.png" alt="company logo">
+            </a>
+            <div class="nav-links" id="nav-links">
+                <ul class="flex">
+                    <li><a href="index.html" class="hover-link">Home</a></li>
+                    <li><a href="orcamento.html" class="hover-link">Suporte</a></li>
+                    <li><a href="sobrenos.html" class="hover-link">Sobre Nós</a></li>
+                    <li><a href="login.php" class="hover-link primary-button">Login</a></li>
+                </ul>
+            </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+
+</body>
+
+<main>
+    <section class="contatos">
+        <div class="container">
+            <h2>Contatos</h2>
+            <div class="flex">
+                <div class="contato-info">
+                    <h3>Endereço</h3>
+                    <p>Av. Juscelino Kubitscheck, 1626 - Quebec</p>
+                    <p>Londrina - PR, 86010-000</p>
+                </div>
+                <div class="contato-info">
+                    <h3>Telefone</h3>
+                    <p>(43) 1234-5678</p>
+                    <p>(43) 9876-5432</p>
+                </div>
+                <div class="contato-info">
+                    <h3>Email</h3>
+                    <p>UAHCIP@gmail.com.br</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mapa">
+        <div class="container">
+            <h2>Localização</h2>
+            <div id="googleMap" style="width:100%;height:400px;"></div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="subfooter">
+        <div class="container flex subfooter-container">
+            <a class="hover-link2" href="#">© 2023 UAHCIP. Todos os direitos reservados</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function initMap() {
+        var unifil = {lat: -23.3128181, lng: -51.1731931};
+        var map = new google.maps.Map(
+            document.getElementById('googleMap'), {zoom: 16, center: unifil});
+        var marker = new google.maps.Marker({position: unifil, map: map});
+    }
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI0_JvMUWuxEczMwkclXtvlqXJ4wQMx7s&callback=initMap"></script>
+
+</html>

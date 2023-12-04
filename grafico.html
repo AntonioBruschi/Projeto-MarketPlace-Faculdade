@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="grafico.css">
+    <title>UAHCIP</title>
+</head>
+
+<body>
+
+    <!-- Barra Lateral -->
+    <div class="sidebar">
+        <a href="#" class="logo">
+            <!-- Logotipo ou imagem aqui -->
+        </a>
+        <ul class="side-menu">
+            <!-- Itens do menu lateral aqui -->
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="index.html" class="logout">
+                    <i class='bx bx-log-out-circle'></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Fim da Barra Lateral -->
+
+    <!-- Conteúdo Principal -->
+    <div class="content">
+        <!-- Barra de Navegação -->
+        <nav>
+            <i class='bx bx-menu'></i>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Procurar...">
+                    <button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            <input type="checkbox" id="theme-toggle" hidden>
+            <label for="theme-toggle" class="theme-toggle"></label>
+            <a href="finalizarcompra.php" class="cart-icon"> <!-- Adicionei o link aqui -->
+                <i class='bx bx-shopping-bag'></i>
+                <span class="count" id="carrinhoContador"></span>
+            </a>
+            <a href="editar.html" class="profile">
+                <img src="images/logotipoUAHCIP.png" alt="Perfil">
+            </a>
+        </nav>
+        <!-- Fim da Barra de Navegação -->
+
+        <main>
+            <div class="header">
+                <div class="left">
+                    <h1>Catálogo</h1>
+                    <ul class="breadcrumb">
+                        <!-- Breadcrumb aqui -->
+                    </ul>
+                </div>
+            </div>
+            <!-- Informações -->
+            <ul class="insights">
+                <li>
+                    <i class='bx bxl-shopify'></i>
+                    <span class="produto1" data-nome="COMPUTADOR PICHAU GAMER " data-preco="2300">
+                        <h3>
+                            R$2.300
+                        </h3>
+                        <p>COMPUTADOR PICHAU GAMER HÉLIOS II, INTEL I3-8100T, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB
+                        </p>
+                        <button class="add-to-cart" type="button" data-nome="COMPUTADOR PICHAU GAMER " data-preco="2300">Adicionar ao Carrinho</button>
+                    </span>
+                </li>
+                <li>
+                    <i class='bx bxl-shopify'></i>
+                    <span class="produto1" data-nome="Monitor Acer" data-preco="649">
+                        <h3>
+                            R$649
+                        </h3>
+                        <p>MONITOR ACER KA2, 23.8 POL, VA, FHD, 1MS, 100HZ, FREESYNC, HDMI/VGA, KA242Y</p>
+                        <button class="add-to-cart" type="button" data-nome="Monitor Acer" data-preco="649">Adicionar ao Carrinho</button>
+                    </span>
+                </li>
+                <li>
+                    <i class='bx bxl-shopify'></i>
+                    <span class="produto1" data-nome="Memoria Notebook corsair" data-preco="216">
+                        <h3>
+                            R$216
+                        </h3>
+                        <p>MEMORIA NOTEBOOK CORSAIR VALUESELECT 8GB (1X8) DDR4 2133MHZ C15 PRETA, CMSO8GX4M1A2133C15</p>
+                        <button class="add-to-cart" type="button" data-nome="Memoria Notebook corsair" data-preco="216">Adicionar ao Carrinho</button>
+                    </span>
+                </li>
+                <li>
+                    <i class='bx bxl-shopify'></i>
+                    <span class="produto1" data-nome="Teclado Gamer" data-preco="799">
+                        <h3>
+                            R$799
+                        </h3>
+                        <p>TECLADO MECANICO GAMER COOLER MASTER CK721 SAKURA EDITION, RGB, SWITCH RED, ROSA,
+                            CK-721-SKTR2-US</p>
+                        <button class="add-to-cart" type="button" data-nome="Teclado Gamer" data-preco="799">Adicionar ao Carrinho</button>
+                    </span>
+                </li>
+                <li>
+                    <i class='bx bxl-shopify'></i>
+                    <span class="produto1" data-nome="Cadeira Gamer Pichau" data-preco="1350">
+                        <h3>
+                            R$1.350
+                        </h3>
+                        <p>Cadeira Gamer Pichau Nova Signature Obsidian, Preta, PG-NVS-OB01</p>
+                        <button class="add-to-cart" type="button" data-nome="Cadeira Gamer Pichau" data-preco="1350">Adicionar ao Carrinho</button>
+                    </span>
+                </li>
+                <li>
+                    <i class='bx bxl-shopify'></i>
+                    <span class="produto1" data-nome="Mouser Gamer" data-preco="729">
+                        <h3>
+                            R$729
+                        </h3>
+                        <p>MOUSE GAMER LOGITECH G502 X PLUS, RGB, 25600DPI, 13 BOTOES, BRANCO, 910-006170</p>
+                        <button class="add-to-cart" type="button" data-nome="Mouser Gamer" data-preco="729">Adicionar ao Carrinho</button>
+                    </span>
+                </li>
+            </ul>
+            <!-- Fim das Informações -->
+
+    </div>
+    </main>
+
+    </div>
+
+    <script src="grafico.js"></script>
+
+</body>
+
+</html>

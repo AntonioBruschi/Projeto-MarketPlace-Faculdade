@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAHCIP</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="orcamento.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    
+    <nav>
+        <div class="container main-nav flex">
+            <a href="#" class="company-logo">
+                <img class="tomate" src="./images/logotipoUAHCIP.png" alt="company logo">
+            </a>
+            <div class="nav-links" id="nav-links">
+                <ul class="flex">
+                    <li><a href="index.html" class="hover-link">Home</a></li>
+                    <li><a href="contato.html" class="hover-link">Contato</a></li>
+                    <li><a href="sobrenos.html" class="hover-link">Sobre Nós</a></li>
+                    <li><a href="login.php" class="hover-link primary-button">Login</a></li>
+                </ul>
+            </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h2 class="section-title">Solicite seu suporte</h2>
+            <form class="budget-form" action="save_budget.php" method="POST">
+                <div class="input-group">
+                    <input type="text" id="first-name" name="first-name" required>
+                    <label for="first-name">Nome</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="last-name" name="last-name" required>
+                    <label for="last-name">Sobrenome</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="cpf" name="cpf" required>
+                    <label for="cpf">CPF</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-group">
+                    <textarea id="observations" name="observations" rows="4"></textarea>
+                    <label for="observations">Observações</label>
+                </div>
+                <button type="submit" class="primary-button">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="subfooter">
+            <div class="container flex subfooter-container">
+                <a class="hover-link2" href="#">© 2023 Agrosafe. Todos os direitos reservados</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('.budget-form');
+            form.addEventListener('submit', function (event) {
+                const firstName = document.getElementById('first-name').value.trim();
+                const lastName = document.getElementById('last-name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const cpfInput = document.getElementById('cpf');
+                const cpf = cpfInput.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+
+                let valid = true;
+
+                if (!firstName) {
+                    alert('Por favor, preencha o campo Nome.');
+                    valid = false;
+                } else if (!lastName) {
+                    alert('Por favor, preencha o campo Sobrenome.');
+                    valid = false;
+                } else if (!email) {
+                    alert('Por favor, preencha o campo Email.');
+                    valid = false;
+                } else if (!validateEmail(email)) {
+                    alert('Por favor, insira um email válido.');
+                    valid = false;
+                } else if (cpf.length !== 11) {
+                    alert('Por favor, insira um CPF válido.');
+                    valid = false;
+                }
+
+                if (!valid) {
+                    event.preventDefault();
+                }
+            });
+
+            // Adiciona a máscara de CPF
+            document.getElementById('cpf').addEventListener('input', function (event) {
+                let inputValue = event.target.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+                if (inputValue.length > 3) {
+                    inputValue = inputValue.replace(/^(\d{3})(\d{3})(\d{3})/, '$1.$2.$3-');
+                }
+                event.target.value = inputValue;
+            });
+        });
+
+        function validateEmail(email) {
+            const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return regex.test(email);
+        }
+    </script>
+
+</body>
+
+</html>
